@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_setting"
+        android:title="设置"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_login"
+        android:title="登录"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_orders"
+        android:title="我的订单"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_usercenter"
+        android:title="用户中心"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_pre_order"
+        android:title="球场预定"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_home"
+        android:title="首页"
+        app:showAsAction="never" />
+</menu>

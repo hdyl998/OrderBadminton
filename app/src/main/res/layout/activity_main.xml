@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.order.badminton.MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="没有登录信息,点我登录" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="刷新" />
+
+            <Button
+                android:id="@+id/btnPreOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="智能预订" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标题"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvOpenInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="开放时间"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+        <com.order.badminton.view.PagerSlidingTabStrip
+            android:id="@+id/menuType"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:pstsIndicatorColor="@color/colorAccent"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsIndicatorTextColor="@color/colorAccent"
+            app:pstsTextColor="@color/colorBLACK" />
+
+
+        <com.order.badminton.view.PagerSlidingTabStrip
+            android:id="@+id/menuDate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:pstsIndicatorColor="@color/colorAccent"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsIndicatorTextColor="@color/colorAccent"
+            app:pstsShouldExpand="true"
+            app:pstsTabPaddingLeftRight="3dp"
+            app:pstsTextColor="@color/colorBLACK" />
+
+
+        <com.order.badminton.view.PagerSlidingTabStrip
+            android:id="@+id/menuChang"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:pstsIndicatorColor="@color/colorTranspet"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsIndicatorTextColor="@color/colorBLACK"
+            app:pstsTextColor="@color/colorBLACK"
+            app:pstsTextSize="10dp" />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="5dp">
+
+            <com.order.badminton.OrderMapView
+                android:id="@+id/orderMapView"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:background="@color/colorGrayLight" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/tvChangInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorBLACK" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格"
+                android:textColor="@color/colorAccent"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tvAllTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="总时间"
+                android:textColor="@color/colorAccent"
+                android:textSize="10sp" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btnOK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下单" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
